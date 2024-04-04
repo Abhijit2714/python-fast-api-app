@@ -46,4 +46,4 @@ jobs:
           git config --global user.email "abijitdhamne@gmail.com"
           git add kubernetes/deployment.yaml
           git commit -m "Update image tag and commit ID in deployment.yaml"
-          git push
+          git push origin main
