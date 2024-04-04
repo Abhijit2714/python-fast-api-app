@@ -32,17 +32,17 @@ jobs:
     - name: Update deployment YAML with latest commit ID
       run: |
           COMMIT_ID=$(git rev-parse --short HEAD)
-          DEPLOYMENT_FILE="argocd/deployment.yaml"
-          sed -i "s|image: abhijitdhamne/spark-app:[^ ]*|image: abhijitdhamne/spark-app:${COMMIT_ID}|g" ${DEPLOYMENT_FILE}
+          DEPLOYMENT_FILE="kubernetes/deployment.yaml"
+          sed -i "s|image: abhijitdhamne/python-fast-api:[^ ]*|image: abhijitdhamne/python-fast-api:${COMMIT_ID}|g" ${DEPLOYMENT_FILE}
           echo "Updated deployment.yaml with the latest commit ID: ${COMMIT_ID}"
     - name: Debug - Show content of deployment.yaml after update
-      run: cat argocd/deployment.yaml
+      run: cat kubernetes/deployment.yaml
     - name: Commit changes to deployment file
       
       run: |
           git config --global user.name "Abhijit2714"
           git config --global user.email "abijitdhamne@gmail.com"
-          git add argocd/deployment.yaml
+          git add kubernetes/deployment.yaml
           git commit -m "Update image tag and commit ID in deployment.yaml"
           git push   
 
