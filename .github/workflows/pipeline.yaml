@@ -44,6 +44,6 @@ jobs:
       run: |
           git config --global user.name "Abhijit2714"
           git config --global user.email "abijitdhamne@gmail.com"
-          git add argocd/deployment.yaml
+          git add kubernetes/deployment.yaml
           git commit -m "Update image tag and commit ID in deployment.yaml"
           git push
