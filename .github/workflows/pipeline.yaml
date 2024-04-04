@@ -39,7 +39,7 @@ jobs:
           echo "Updated deployment.yaml with the latest commit ID: ${COMMIT_ID}"
     - name: Debug - Show content of deployment.yaml after update
       run: cat kubernetes/deployment.yaml
-    - name: Commit changes to deployment file
+    - name: Commit changes to deployment file.
       
       run: |
           git config --global user.name "Abhijit2714"
