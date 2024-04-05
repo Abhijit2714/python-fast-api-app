@@ -46,4 +46,4 @@ jobs:
           git config --global user.email "abijitdhamne@gmail.com"
           git add kubernetes/deployment.yaml
           git commit -m "Update image tag and commit ID in deployment.yaml"
-          git push origin main
+          git push https://<USERNAME>:${{ secrets.PAT_TOKEN }}@github.com/Abhijit2714/python-fast-api-app.git main
