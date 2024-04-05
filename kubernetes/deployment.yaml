@@ -17,7 +17,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
       - name: fast-api
-        image: abhijitdhamne/k8s-python-app:53ecc81
+        image: abhijitdhamne/python-fast-api:53ecc81
         imagePullPolicy: "Always"
         ports:
         - containerPort: 80
