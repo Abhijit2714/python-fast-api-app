@@ -27,7 +27,7 @@ spec:
             memory: 300Mi
           limits:
 ---
-apiVersion: autoscaling/v2beta2
+apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
   name: fast-api-hpa
